@@ -319,35 +319,35 @@ public class ToolModel
 		hasAutomatedPlatform = hasAutomatedPlatform || isTrueOrOne(n);
 
 		//hah, all this for a debug string... lol.
-		String result = "Loading " + type + " '" + name + "': ";
-		result += "material: " + material + ", ";
-		result += "with these capabilities: ";
-		if (hasFloodCoolant)
-			result += "flood coolant, ";
-		if (hasMotor)
-			result += "motor, ";
-		if (hasSpindle)
-			result += "spindle, ";
-		if (hasMistCoolant)
-			result += "mist coolant, ";
-		if (hasFan)
-			result += "fan, ";
-		if (hasValve)
-			result += "valve, ";
-		if (hasCollet)
-			result += "collet, ";
-		if (hasHeater)
-			result += "heater, ";
-		if (hasHeatedPlatform)
-			result += "hasHeatedPlatform, ";
-		if (hasAutomatedPlatform)
-			result += "hasAutomatedPlatform, ";
-		if (motorIsStepper) {
-			result += "motorIsStepper, ";
-			if(motorStepperAxis != null ) result += "motorStepperAxis: " + motorStepperAxis.name() + ", ";
-			else  result += "motorStepperAxis: (null), ";
-			result += "motorSteps: " + motorSteps + ", ";
-		}
+//		String result = "Loading " + type + " '" + name + "': ";
+//		result += "material: " + material + ", ";
+//		result += "with these capabilities: ";
+//		if (hasFloodCoolant)
+//			result += "flood coolant, ";
+//		if (hasMotor)
+//			result += "motor, ";
+//		if (hasSpindle)
+//			result += "spindle, ";
+//		if (hasMistCoolant)
+//			result += "mist coolant, ";
+//		if (hasFan)
+//			result += "fan, ";
+//		if (hasValve)
+//			result += "valve, ";
+//		if (hasCollet)
+//			result += "collet, ";
+//		if (hasHeater)
+//			result += "heater, ";
+//		if (hasHeatedPlatform)
+//			result += "hasHeatedPlatform, ";
+//		if (hasAutomatedPlatform)
+//			result += "hasAutomatedPlatform, ";
+//		if (motorIsStepper) {
+//			result += "motorIsStepper, ";
+//			if(motorStepperAxis != null ) result += "motorStepperAxis: " + motorStepperAxis.name() + ", ";
+//			else  result += "motorStepperAxis: (null), ";
+//			result += "motorSteps: " + motorSteps + ", ";
+//		}
 	}
 	
 	/*************************************

@@ -12,6 +12,7 @@ import replicatorg.app.tools.IButtonCrc;
 public class PacketProcessor implements PacketConstants {
 	
 	public static class CRCException extends Exception {
+		private static final long serialVersionUID = 1L;
 		private int expected;
 		private int actual;
 		
@@ -24,7 +25,9 @@ public class PacketProcessor implements PacketConstants {
 		public int getExpected() { return expected; }
 	}
 
-	public static class PacketNoiseException extends Exception { }
+	public static class PacketNoiseException extends Exception { 
+		private static final long serialVersionUID = 1L;
+	}
 
 	enum PacketState {
 		START, LEN, PAYLOAD, CRC, LAST
@@ -114,6 +117,8 @@ public class PacketProcessor implements PacketConstants {
 				throw new CRCException(crc.getCrc(), targetCrc);
 			}
 			return true;
+		default:
+			break;
 		}
 		return false;
 	}

@@ -4,8 +4,6 @@ import java.awt.Container;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.Dimension;
-import java.io.BufferedOutputStream;
-import java.util.logging.Level;
 import java.util.prefs.BackingStoreException;
 import java.util.prefs.Preferences;
 
@@ -16,6 +14,7 @@ import javax.swing.KeyStroke;
 import replicatorg.app.Base;
 
 public class AdvancedPrefs extends JFrame {
+	private static final long serialVersionUID = 1L;
 
 	public AdvancedPrefs()
 	{

@@ -256,7 +256,7 @@ public class MiracleGruePostProcessor {
 		//and to send option overrides to miraclegrue
 		prefs.add(0, new MiracleGruePreference(){
 			MiracleGrueBooleanPreference outlineActive;
-			MiracleGrueBooleanPreference coolActive;
+//			MiracleGrueBooleanPreference coolActive;
 			//Static block
 			{
 				outlineActive = new MiracleGrueBooleanPreference("Outline Active", 

@@ -256,7 +256,7 @@ public class Slic3rPostProcessor {
 		//and to send option overrides to slic3r
 		prefs.add(0, new Slic3rPreference(){
 			Slic3rBooleanPreference outlineActive;
-			Slic3rBooleanPreference coolActive;
+			//Slic3rBooleanPreference coolActive;
 			//Static block
 			{
 				outlineActive = new Slic3rBooleanPreference("Outline Active", 

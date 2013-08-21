@@ -36,6 +36,8 @@ import javax.swing.JFrame;
 import replicatorg.util.Point5d;
 
 public abstract class SimulationWindow extends JFrame {
+	private static final long serialVersionUID = 1L;
+	
 	protected Rectangle2D.Double simulationBounds;
 	
 	public SimulationWindow() {

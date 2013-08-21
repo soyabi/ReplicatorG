@@ -25,6 +25,7 @@ public abstract class ToolpathGenerator {
 	}
 	
 	public class GeneratorEvent extends EventObject {
+		private static final long serialVersionUID = 1L;
 		private Completion completion;
 		private String message;
 		

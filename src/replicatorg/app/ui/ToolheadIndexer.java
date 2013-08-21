@@ -22,6 +22,7 @@ import replicatorg.drivers.MultiTool;
  *
  */
 public class ToolheadIndexer extends JDialog {
+	private static final long serialVersionUID = 1L;
 
 	final static String instructions = "<html>" +
 			"Set the Toolhead Index of *all attached extruders*.\n"+  

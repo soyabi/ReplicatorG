@@ -30,8 +30,6 @@ import java.util.EnumSet;
 import java.util.Set;
 import java.util.Vector;
 import java.util.concurrent.atomic.AtomicReference;
-import replicatorg.machine.*;
-
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 

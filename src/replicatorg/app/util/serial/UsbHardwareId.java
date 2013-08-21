@@ -14,7 +14,8 @@ enum UsbHardwareId {
 
 	private int pid;			/// USB Product ID
 	private int vid;			/// USB vendorId
-	private int hwVersion;		/// < hw version of the device
+//	private int hwVersion;		/// < hw version of the device
+	@SuppressWarnings("unused")
 	private String name;		/// < Display name of the device 
 	private boolean verified;  /// < this is a valid verified VID/PID only for one hw config
 

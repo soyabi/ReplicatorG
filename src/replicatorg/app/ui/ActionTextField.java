@@ -7,9 +7,6 @@ import java.awt.event.FocusListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.text.Format;
-import java.text.ParseException;
-import java.util.logging.Level;
-
 import javax.swing.JFormattedTextField;
 import javax.swing.text.DefaultFormatter;
 
@@ -22,6 +19,7 @@ import replicatorg.app.Base;
  *
  */
 public abstract class ActionTextField extends JFormattedTextField {
+	private static final long serialVersionUID = 1L;
 	Color defaultColor;
 	Color modifiedColor;
 	boolean valueModified;

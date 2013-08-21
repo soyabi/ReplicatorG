@@ -7,7 +7,6 @@ import java.awt.FontMetrics;
 import java.util.Vector;
 
 import javax.swing.JLabel;
-import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
 import net.miginfocom.swing.MigLayout;

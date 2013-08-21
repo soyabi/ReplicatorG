@@ -17,6 +17,7 @@ import javax.swing.event.ListSelectionListener;
 import net.miginfocom.swing.MigLayout;
 
 public class BuildSelectionDialog extends JDialog {
+	private static final long serialVersionUID = 1L;
 
 	private JButton okButton;
 	private JButton cancelButton;

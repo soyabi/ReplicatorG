@@ -18,6 +18,7 @@ import replicatorg.plugin.toolpath.slic3r.Slic3rGenerator.Profile;
 import replicatorg.plugin.toolpath.slic3r.Slic3rGenerator.Slic3rPreference;
 
 class ConfigurationDialog extends JDialog {
+	private static final long serialVersionUID = 1L;
 	final boolean postProcessToolheadIndex = true;
 	final String profilePref = "replicatorg.slic3r.profilePref";
 	

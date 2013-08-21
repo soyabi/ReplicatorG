@@ -152,6 +152,8 @@ public class MoveTool extends Tool {
 		case TRANSLATE_OBJECT:
 			doTranslate(xd,yd);
 			break;
+		default:
+			break;
 		}
 		startPoint = p;
 	}

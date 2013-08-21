@@ -27,12 +27,14 @@ import org.w3c.dom.NodeList;
 import replicatorg.app.Base;
 
 public class BoardSelectionPanel extends JPanel {
+	private static final long serialVersionUID = 1L;
 	interface BoardSelectionListener {
 		public void boardSelected(Node board);
 		public void boardConfirmed();
 	}
 	
-	class BoardListModel extends AbstractListModel {	
+	class BoardListModel extends AbstractListModel {
+		private static final long serialVersionUID = 1L;
 		NodeList nl ;
 		BoardListModel(Document firmwareDoc) {
 			nl = firmwareDoc.getElementsByTagName("board");
@@ -46,6 +48,7 @@ public class BoardSelectionPanel extends JPanel {
 	}
 
 	class BoardListCellRenderer extends JLabel implements ListCellRenderer {
+		private static final long serialVersionUID = 1L;
 		Icon boardIcon;
 		public BoardListCellRenderer(Icon boardIcon) {
 			this.boardIcon = boardIcon;

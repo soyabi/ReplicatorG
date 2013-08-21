@@ -30,6 +30,7 @@ import java.util.Arrays;
 import java.util.EnumSet;
 import java.util.Hashtable;
 import java.util.logging.Level;
+
 import javax.vecmath.Point3d;
 
 import replicatorg.app.Base;
@@ -38,7 +39,6 @@ import replicatorg.drivers.OnboardParameters;
 import replicatorg.drivers.RetryException;
 import replicatorg.drivers.Version;
 import replicatorg.machine.model.AxisId;
-import replicatorg.machine.model.ToolheadsOffset;
 import replicatorg.machine.model.ToolModel;
 import replicatorg.util.Point5d;
 
@@ -237,18 +237,18 @@ public class MightySailfish extends Makerbot4GAlternateDriver
 	// note: other machines also inherit: PenPlotter, MultiTool
 	
 	/// Stores LED color by effect. Mostly uses '0' (color now)
-	private Hashtable ledColorByEffect;
+	private Hashtable<Integer, Color> ledColorByEffect;
 
 	/// Stores the last know stepper values.
 	/// on boot, fetches those values from the machine,
 	/// afterwords updated when stepper values are set (currently
 	/// there is no way to get stepper values from the machine)
 	/// hash is <int(StepperId), int(StepperLastSetValue>
-	private Hashtable stepperValues; //only 0 - 127 are valid
+	private Hashtable<Integer, Integer> stepperValues; //only 0 - 127 are valid
 
 	
 	/// 0 -127, current reference value. Store on desktop for this machine
-	private int voltageReference; 
+//	private int voltageReference; 
 
 	private boolean eepromChecked = false;
 	
@@ -273,11 +273,11 @@ public class MightySailfish extends Makerbot4GAlternateDriver
 	public MightySailfish() {
 		super();
 		absoluteXYZ = true;
-		ledColorByEffect = new Hashtable();
+		ledColorByEffect = new Hashtable<Integer, Color>();
 		ledColorByEffect.put(0, Color.BLACK);
 		Base.logger.info("Created a MightySailfish");
 
-		stepperValues= new Hashtable();
+		stepperValues= new Hashtable<Integer, Integer>();
 		
 		// Make sure this accurately reflects the minimum preferred
 		// firmware version we want this driver to support.
@@ -690,7 +690,7 @@ public class MightySailfish extends Makerbot4GAlternateDriver
 			return false;
 
 		Point5d axisLengths = getMachine().getAxisLengths();
-		Point5d machineStepsPerMM = getMachine().getStepsPerMM();
+		//Point5d machineStepsPerMM = getMachine().getStepsPerMM();
 
 		boolean needsReset = false;
 		int stepperCountMightyBoard = 5;
@@ -818,7 +818,7 @@ public class MightySailfish extends Makerbot4GAlternateDriver
 			//convert feedrate to mm/sec
 			feedrate = feedrate / 60.0;
 			
-			Point5d stepsPerMM = machine.getStepsPerMM();
+			//Point5d stepsPerMM = machine.getStepsPerMM();
 			
 			//
 			// Commented out 4/16/13 Jetty.  Likely redundant and an overhang from RPM days.
@@ -952,13 +952,13 @@ public class MightySailfish extends Makerbot4GAlternateDriver
 */
 		PacketBuilder pb = new PacketBuilder(MotherboardCommandCode.SET_LED_STRIP_COLOR.getCode());
 
-		int Channel = 3;
-		int Brightness = 1;
+		// int Channel = 3;
+		// int Brightness = 1;
 		int BlinkRate = 0;
-		byte colorSelect = (byte)0x3F;
+		// byte colorSelect = (byte)0x3F;
        
        // {bits: XXBBGGRR : BLUE: 0b110000, Green:0b1100, RED:0b11}
-       colorSelect = getColorBits(color);
+       //colorSelect = getColorBits(color);
        
 		pb.add8(color.getRed());
 		pb.add8(color.getGreen());
@@ -1911,7 +1911,8 @@ public class MightySailfish extends Makerbot4GAlternateDriver
 		PacketBuilder pb = new PacketBuilder( MotherboardCommandCode.RESET_TO_FACTORY.getCode() );
 		pb.add8((byte) 0xFF);
 		pb.add8(ToolCommandCode.GET_PLATFORM_SP.getCode());
-		PacketResponse pr = runCommand( pb.getPacket() );
+		// PacketResponse pr =
+		runCommand( pb.getPacket() );
 
 	}
 
@@ -1968,7 +1969,7 @@ public class MightySailfish extends Makerbot4GAlternateDriver
 		byte options = 0; //bit 1 true cause the buffer to clear, bit 2 true indicates message complete
 		final int MAX_MSG_PER_PACKET = 20;
 		int sentTotal = 0; /// set 'clear buffer' flag
-		double timeout = 0;
+	
 		
 		/// send message in 25 char blocks. Set 'clear buffer' on the first,
 		/// and set the timeout only on the last block
@@ -1979,7 +1980,6 @@ public class MightySailfish extends Makerbot4GAlternateDriver
 			// if this is the last packet, set timeout and indicate that message is complete
             // set the "wait on button" flag if specified
 			if(!(sentTotal + MAX_MSG_PER_PACKET <  message.length())){
-				timeout = seconds;
 				options |= 0x02;
                 if(buttonWait)
                     options |= 0x04;

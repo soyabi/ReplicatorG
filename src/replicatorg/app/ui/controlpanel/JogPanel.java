@@ -38,6 +38,7 @@ import replicatorg.util.Point5d;
 
 public class JogPanel extends JPanel implements ActionListener, MouseListener
 {
+	private static final long serialVersionUID = 1L;
 	
 	private class Point2i {
 		public int x, y;
@@ -368,6 +369,7 @@ public class JogPanel extends JPanel implements ActionListener, MouseListener
 	 *
 	 */
 	public class JogButton extends JButton {
+		private static final long serialVersionUID = 1L;
 		
 		public JogButton(String root, String tooltip, ButtonArrangement arrangement) {
 			String baseImage = arrangement.buttonFolder + root;

@@ -35,6 +35,7 @@ import replicatorg.plugin.toolpath.skeinforge.SkeinforgeGenerator.Profile;
  *
  */
 class EditProfileDialog extends JDialog {
+	private static final long serialVersionUID = 1L;
 	final boolean postProcessToolheadIndex = true;
 	final String manageStr = "Manage profiles...";
 	final String profilePref = "replicatorg.skeinforge.profilePref";

@@ -4,10 +4,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.Format;
 
-import replicatorg.app.Base;
-import replicatorg.app.ui.controlpanel.ExtruderPanel;
-
 public class CallbackTextField extends ActionTextField {
+	private static final long serialVersionUID = 1L;
 	ActionListener panel;
 	String actionCommand;
 	

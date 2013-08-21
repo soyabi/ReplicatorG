@@ -116,6 +116,8 @@ public class SimulationWindow2D extends SimulationWindow implements
 	}
 
 	abstract class GenericRuler extends MyComponent {
+		private static final long serialVersionUID = 1L;
+
 		protected int machinePosition = 0;
 
 		protected int mousePosition = 0;
@@ -225,6 +227,7 @@ public class SimulationWindow2D extends SimulationWindow implements
 	}
 
 	class HorizontalRuler extends GenericRuler {
+		private static final long serialVersionUID = 1L;
 		public HorizontalRuler(int rWidth) {
 			super(rWidth);
 		}
@@ -307,6 +310,9 @@ public class SimulationWindow2D extends SimulationWindow implements
 	}
 
 	class VerticalRuler extends GenericRuler {
+
+		private static final long serialVersionUID = 1L;
+
 		public VerticalRuler(int rWidth) {
 			super(rWidth);
 		}
@@ -392,6 +398,7 @@ public class SimulationWindow2D extends SimulationWindow implements
 	 *
 	 */
 	class BuildView extends MyComponent implements MouseMotionListener {
+		private static final long serialVersionUID = 1L;
 	
 		/// Maximim X 
 		private Point3d minimum;

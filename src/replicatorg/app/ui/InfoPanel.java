@@ -26,6 +26,7 @@ import replicatorg.drivers.OnboardParameters.CommunicationStatistics;
 import replicatorg.machine.MachineFactory;
 
 public class InfoPanel extends JFrame {
+	private static final long serialVersionUID = 1L;
     JTextArea infoArea;
 	
 	public InfoPanel() {

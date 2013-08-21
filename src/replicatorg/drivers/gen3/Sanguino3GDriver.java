@@ -424,10 +424,7 @@ public class Sanguino3GDriver extends SerialDriver implements
 
 			pp = new PacketProcessor();
 			
-			if(packet == null) {
-				Base.logger.severe("null packet in runCommand");
-				return PacketResponse.timeoutResponse();
-			}
+		
 			
 			// This can actually happen during shutdown.
 			if (serial == null){

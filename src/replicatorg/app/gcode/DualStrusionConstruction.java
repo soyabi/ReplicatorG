@@ -149,6 +149,7 @@ public class DualStrusionConstruction
 	 * @param source
 	 * @return
 	 */
+	@SuppressWarnings("serial")
 	private LinkedList<Layer> testParseLayers(final GCodeSource source)
 	{
 		/*
@@ -500,6 +501,7 @@ public class DualStrusionConstruction
 	 * @param left
 	 * @param right
 	 */
+	@SuppressWarnings("serial")
 	private LinkedList<Layer> doMerge(final LinkedList<Layer> left, final LinkedList<Layer> right)
 	{
 		/*

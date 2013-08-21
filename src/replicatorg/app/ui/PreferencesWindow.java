@@ -45,7 +45,6 @@ import replicatorg.app.util.PythonUtils;
 import replicatorg.app.util.SwingPythonSelector;
 import replicatorg.app.util.SwingPyPySelector;
 import replicatorg.machine.MachineInterface;
-import replicatorg.machine.model.MachineType;
 import replicatorg.uploader.FirmwareUploader;
 
 /**
@@ -54,6 +53,7 @@ import replicatorg.uploader.FirmwareUploader;
  *
  */
 public class PreferencesWindow extends JFrame implements GuiConstants {
+	private static final long serialVersionUID = 1L;
 	// gui elements
 
 	// the calling editor, so updates can be applied
@@ -95,6 +95,7 @@ public class PreferencesWindow extends JFrame implements GuiConstants {
 		final InitialOpenBehavior openBehavior = InitialOpenBehavior.values()[ordinal];
 		ButtonGroup bg = new ButtonGroup();
 		class RadioAction extends AbstractAction {
+			private static final long serialVersionUID = 1L;
 			private InitialOpenBehavior behavior;
 		    public RadioAction(String text, InitialOpenBehavior behavior) {
 		    	super(text);

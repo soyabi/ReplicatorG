@@ -102,6 +102,8 @@ public abstract class Tool implements MouseMotionListener, MouseListener, MouseW
 			// Pan view
 			parent.preview.adjustViewTranslation(-0.5 * xd, 0.5 * yd);
 			break;
+		default:
+			break;
 		}
 		startPoint = p;
 	}

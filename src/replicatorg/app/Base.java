@@ -80,7 +80,6 @@ import replicatorg.app.ui.NotificationHandler;
 import replicatorg.drivers.DriverQueryInterface;
 import replicatorg.machine.MachineLoader;
 import replicatorg.machine.MachineInterface;
-import replicatorg.machine.model.MachineType;
 import replicatorg.uploader.FirmwareUploader;
 import ch.randelshofer.quaqua.QuaquaManager;
 

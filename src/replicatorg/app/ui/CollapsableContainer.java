@@ -41,6 +41,7 @@ import replicatorg.app.Base;
  *
  */
 public class CollapsableContainer extends JComponent {
+	private static final long serialVersionUID = 1L;
 	private boolean isCollapsed = false;
 	private static Icon collapsedIcon = null;
 	private static Icon expandedIcon = null;
@@ -52,6 +53,7 @@ public class CollapsableContainer extends JComponent {
 	}
 	
 	protected class Header extends JButton implements ActionListener {
+		private static final long serialVersionUID = 1L;
 
 		public Header(String title, boolean collapsed) {
 			setText(title);

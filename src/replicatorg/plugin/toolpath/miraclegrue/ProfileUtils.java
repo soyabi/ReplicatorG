@@ -82,7 +82,7 @@ public class ProfileUtils {
 	// based on selected machine, etc.
 	public static boolean shouldDisplay(MiracleGrueGenerator.MgProfile p) {
 
-		String selectedMachine = Base.preferences.get("machine.name", "no machine selected");
+		// String selectedMachine = Base.preferences.get("machine.name", "no machine selected");
 		
 		// for MiracleGrue, display options for all machines, don't match machine names
 		// to display yet.

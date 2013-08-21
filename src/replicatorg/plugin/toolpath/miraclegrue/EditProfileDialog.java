@@ -28,6 +28,7 @@ import replicatorg.app.Base;
 import replicatorg.plugin.toolpath.miraclegrue.MiracleGrueGenerator.MgProfile;
 
 class EditProfileDialog extends JDialog {
+	private static final long serialVersionUID = 1L;
 	final boolean postProcessToolheadIndex = true;
 	final String manageStr = "Manage profiles...";
 	final String profilePref = "replicatorg.miracle_grue.profilePref";

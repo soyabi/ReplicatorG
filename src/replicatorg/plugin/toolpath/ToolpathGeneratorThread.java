@@ -1,8 +1,6 @@
 package replicatorg.plugin.toolpath;
 
 import java.awt.Frame;
-import java.util.logging.Level;
-
 import javax.swing.SwingUtilities;
 
 import replicatorg.app.Base;

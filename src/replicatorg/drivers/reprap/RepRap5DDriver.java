@@ -47,7 +47,6 @@ import org.w3c.dom.Node;
 import replicatorg.app.Base;
 import replicatorg.app.tools.XML;
 import replicatorg.app.util.serial.ByteFifo;
-import replicatorg.app.util.serial.Serial;
 import replicatorg.app.util.serial.SerialFifoEventListener;
 import replicatorg.drivers.BadFirmwareVersionException;
 import replicatorg.drivers.RealtimeControl;
@@ -151,7 +150,7 @@ public class RepRap5DDriver extends SerialDriver implements SerialFifoEventListe
 	/**
 	 * the size of the buffer on the GCode host
 	 */
-	private int maxBufferSize = 128;
+//	private int maxBufferSize = 128;
 
 	/**
 	 * The commands sent but not yet acknowledged by the firmware. Stored so they can be resent 

@@ -4,8 +4,6 @@ import java.util.EnumMap;
 import java.util.Map;
 import java.util.Vector;
 import java.util.logging.Level;
-import java.util.Arrays;
-
 import org.w3c.dom.Element;
 
 import replicatorg.app.Base;
@@ -656,7 +654,8 @@ public class Makerbot4GDriver extends Sanguino3GDriver {
 			/// Not reset are the filament counters and the home offsets
 			PacketBuilder pb = new PacketBuilder(MotherboardCommandCode.RESET_TO_FACTORY.getCode());
 			pb.add8((byte) 0xFF);  // reserved byte in payload
-			PacketResponse pr = runCommand(pb.getPacket());
+			//PacketResponse pr = 
+			runCommand(pb.getPacket());
 		}
 		else
 			super.resetSettingsToBlank();

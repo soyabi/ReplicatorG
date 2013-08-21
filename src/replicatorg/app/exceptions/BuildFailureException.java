@@ -25,6 +25,7 @@ package replicatorg.app.exceptions;
 
 public class BuildFailureException extends Exception
 {
+	private static final long serialVersionUID = 1L;
 	public BuildFailureException(String s)
 	{
 		super(s);

@@ -179,6 +179,7 @@ public class ExtruderOnboardParameters extends JPanel {
 	}
 
 	private class ExtraFeaturesPanel extends JPanel implements Commitable {
+		private static final long serialVersionUID = 1L;
 		private JCheckBox swapMotors;
 		private JComboBox extCh, hbpCh, abpCh;
 		private OnboardParameters.ExtraFeatures ef;
@@ -235,6 +236,7 @@ public class ExtruderOnboardParameters extends JPanel {
 	}
 	
 	private class PIDPanel extends JPanel implements Commitable {
+		private static final long serialVersionUID = 1L;
 	    private NumberFormat eightPlaces = (NumberFormat) floatFormat.clone();
 	    {
 	    	eightPlaces.setMaximumFractionDigits(8);

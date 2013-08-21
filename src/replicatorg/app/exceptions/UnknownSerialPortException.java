@@ -12,6 +12,7 @@ package replicatorg.app.exceptions;
  *
  */
 public class UnknownSerialPortException extends SerialException {
+	private static final long serialVersionUID = 1L;
 	private String name;
 	
 	/**

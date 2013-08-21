@@ -3,6 +3,8 @@ package replicatorg.app.ui;
 import replicatorg.app.Base;
 
 public class SavingTextField extends ActionTextField {
+	private static final long serialVersionUID = 1L;
+	
 	final String parameterName;
 	
 	public SavingTextField(String parameterName, String text, int columns) {

@@ -10,7 +10,6 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JDialog;
 import javax.swing.JOptionPane;
-import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
@@ -19,9 +18,9 @@ import replicatorg.app.Base;
 import replicatorg.plugin.toolpath.skeinforge.SkeinforgeGenerator.Profile;
 import replicatorg.plugin.toolpath.skeinforge.SkeinforgeGenerator.SkeinforgePreference;
 import replicatorg.plugin.toolpath.skeinforge.SkeinforgeGenerator.SkeinforgeOption;
-import replicatorg.plugin.toolpath.skeinforge.PrintOMatic5D;
 
 class ConfigurationDialog extends JDialog {
+	private static final long serialVersionUID = 1L;
 	final boolean postProcessToolheadIndex = true;
 	final String profilePref = "replicatorg.skeinforge.profilePref";
 	

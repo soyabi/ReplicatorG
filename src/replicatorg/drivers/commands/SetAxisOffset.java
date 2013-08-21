@@ -27,6 +27,8 @@ public class SetAxisOffset implements DriverCommand {
 		case Z:
 			driver.setOffsetZ(offsetId, offset);
 			break;
+		default:
+			break;
 		}
 	}
 }

@@ -15,6 +15,8 @@ import net.miginfocom.swing.MigLayout;
 
 public class ToolPanel extends JPanel implements KeyListener {
 
+	private static final long serialVersionUID = 1L;
+	
 	public JButton createToolButton(String text, String iconPath) {
 		//ImageIcon icon = new ImageIcon(Base.getImage(iconPath, this));
 		JButton button = new JButton(text);//,icon);

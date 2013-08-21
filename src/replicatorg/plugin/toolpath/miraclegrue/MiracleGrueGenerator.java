@@ -3,12 +3,8 @@ package replicatorg.plugin.toolpath.miraclegrue;
 import java.awt.Frame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -28,7 +24,6 @@ import javax.swing.JPanel;
 
 import net.miginfocom.swing.MigLayout;
 import replicatorg.app.Base;
-import replicatorg.app.util.PythonUtils;
 import replicatorg.app.util.StreamLoggerThread;
 import replicatorg.machine.model.ToolheadAlias;
 import replicatorg.model.BuildCode;
@@ -96,7 +91,7 @@ public abstract class MiracleGrueGenerator extends ToolpathGenerator {
 		public MgProfile(String fullPath) {
 
 			this.fullPath = fullPath;
-			int idx = fullPath.lastIndexOf(File.separatorChar);
+			//int idx = fullPath.lastIndexOf(File.separatorChar);
 
 		
 			File targetFile = new File(fullPath);

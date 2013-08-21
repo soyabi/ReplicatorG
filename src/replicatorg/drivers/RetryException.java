@@ -7,4 +7,5 @@ package replicatorg.drivers;
  *
  */
 public class RetryException extends Exception {
+	private static final long serialVersionUID = 1L;
 }

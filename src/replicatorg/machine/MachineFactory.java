@@ -90,6 +90,7 @@ public class MachineFactory {
 		return v;
 	}
 
+	@SuppressWarnings("serial")
 	static class MachineMap extends HashMap<String,Element> {
 	};
 	

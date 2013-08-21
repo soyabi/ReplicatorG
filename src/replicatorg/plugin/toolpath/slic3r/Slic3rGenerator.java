@@ -28,7 +28,6 @@ import javax.swing.JPanel;
 
 import net.miginfocom.swing.MigLayout;
 import replicatorg.app.Base;
-import replicatorg.app.util.PythonUtils;
 import replicatorg.app.util.StreamLoggerThread;
 import replicatorg.machine.model.ToolheadAlias;
 import replicatorg.model.BuildCode;

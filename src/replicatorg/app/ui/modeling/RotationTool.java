@@ -130,6 +130,8 @@ public class RotationTool extends Tool {
 		case NONE:
 			super.mouseDragged(e);
 			break;
+		default:
+			break;
 		}
 		startPoint = p;
 	}

@@ -195,7 +195,7 @@ public class RealtimePanel extends JFrame implements ChangeListener, WindowListe
 		}
 	}
 	public void actionPerformed(ActionEvent e) {
-		String s = e.getActionCommand();
+		// String s = e.getActionCommand();
 	}
 	
 	@Override

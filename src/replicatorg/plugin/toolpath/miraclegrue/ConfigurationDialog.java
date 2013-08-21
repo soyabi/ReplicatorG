@@ -18,6 +18,7 @@ import replicatorg.plugin.toolpath.miraclegrue.MiracleGrueGenerator.MgProfile;
 import replicatorg.plugin.toolpath.miraclegrue.MiracleGrueGenerator.MiracleGruePreference;
 
 class ConfigurationDialog extends JDialog {
+	private static final long serialVersionUID = 1L;
 	final boolean postProcessToolheadIndex = true;
 	final String profilePref = "replicatorg.miraclegrue.profilePref";
 	

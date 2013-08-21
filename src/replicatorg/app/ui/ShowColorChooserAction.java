@@ -10,6 +10,7 @@ import javax.swing.JDialog;
 import javax.swing.JFrame;
 
 public class ShowColorChooserAction extends AbstractAction {
+	private static final long serialVersionUID = 1L;
     JColorChooser chooser;
     JDialog dialog;
     

@@ -43,6 +43,7 @@ import replicatorg.app.Base;
 public class TextAreaPainter extends JComponent
 implements TabExpander, Printable
 {
+	private static final long serialVersionUID = 1L;
   /** True if inside printing, will handle disabling the highlight */
   boolean printing;
 

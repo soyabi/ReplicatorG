@@ -19,12 +19,14 @@ import replicatorg.app.util.serial.Name;
 import replicatorg.app.util.serial.Serial;
 
 public class PortSelectionPanel extends JPanel {
+	private static final long serialVersionUID = 1L;
 	interface PortSelectionListener {
 		public void portSelected(String port);
 		public void portConfirmed();
 	}
 	
 	class SerialListModel extends AbstractListModel {
+		private static final long serialVersionUID = 1L;
 		public Vector<Name> names = Serial.scanSerialNames();
 		public Object getElementAt(int idx) {
 			return names.elementAt(idx);

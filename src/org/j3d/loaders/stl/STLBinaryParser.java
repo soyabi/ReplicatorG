@@ -60,21 +60,11 @@ class STLBinaryParser extends STLParser
 
     public boolean parse( final URL url ) throws IOException
     {
-        InputStream stream = null;
         int length = -1;
-        try
-        {
-            final URLConnection connection = url.openConnection( );
-            stream = connection.getInputStream( );
-            length = connection.getContentLength( );
-        }
-        catch( IOException e )
-        {
-            if( stream != null )
-            {
-                stream.close( );
-            }
-        }
+        final URLConnection connection = url.openConnection( );
+        InputStream stream = connection.getInputStream( );
+        length = connection.getContentLength( );
+      
         itsStream = new BufferedInputStream( stream );
         try
         {
@@ -109,21 +99,11 @@ class STLBinaryParser extends STLParser
     public boolean parse( final URL url, final Component parentComponent )
     throws InterruptedIOException, IOException
     {
-        InputStream stream = null;
         int length = -1;
-        try
-        {
-            final URLConnection connection = url.openConnection( );
-            stream = connection.getInputStream( );
-            length = connection.getContentLength( );
-        }
-        catch( IOException e )
-        {
-            if( stream != null )
-            {
-                stream.close( );
-            }
-        }
+        final URLConnection connection = url.openConnection( );
+        InputStream stream = connection.getInputStream( );
+        length = connection.getContentLength( );
+     
         stream = new ProgressMonitorInputStream
         (
             parentComponent,

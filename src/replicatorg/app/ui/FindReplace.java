@@ -59,6 +59,7 @@ import replicatorg.app.Base;
  * should anyone have clues about how to fix.
  */
 public class FindReplace extends JFrame implements ActionListener {
+	private static final long serialVersionUID = 1L;
 
 	static final int BIG = 13;
 

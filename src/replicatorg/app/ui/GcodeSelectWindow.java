@@ -1,8 +1,6 @@
 package replicatorg.app.ui;
 
 import java.io.File;
-import java.io.FileFilter;
-
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 

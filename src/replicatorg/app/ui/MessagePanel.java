@@ -59,6 +59,7 @@ import replicatorg.app.Base;
  * println() or whatever directly to systemOut or systemErr.
  */
 public class MessagePanel extends JScrollPane {
+	private static final long serialVersionUID = 1L;
 	MainWindow editor;
 
 	JTextPane consoleTextPane;
@@ -232,6 +233,7 @@ public class MessagePanel extends JScrollPane {
  * event thread, so they need to be synchronized
  */
 class BufferedStyledDocument extends DefaultStyledDocument {
+	private static final long serialVersionUID = 1L;
 	ArrayList<ElementSpec> elements = new ArrayList<ElementSpec>();
 
 	int maxLineLength, maxLineCount;

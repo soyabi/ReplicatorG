@@ -53,6 +53,7 @@ import replicatorg.model.BuildElement;
  * Sketch tabs at the top of the editor window.
  */
 public class EditorHeader extends BGPanel implements ActionListener {
+	private static final long serialVersionUID = 1L;
 	private ButtonGroup tabGroup = new ButtonGroup();
 
 	public BuildElement getSelectedElement() {
@@ -111,6 +112,7 @@ public class EditorHeader extends BGPanel implements ActionListener {
 
 
 	private class TabButton extends JToggleButton implements BuildElement.Listener {
+		private static final long serialVersionUID = 1L;
 		// Using a weak reference to work around massive leaks
 		// http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=4726458
 		// This bug is almost old enough to attend high school.

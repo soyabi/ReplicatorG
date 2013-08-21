@@ -45,8 +45,6 @@ import java.awt.Toolkit;
 import java.awt.Window;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.beans.PropertyChangeEvent;
-import java.beans.PropertyChangeListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -127,7 +125,6 @@ import replicatorg.app.util.StreamLoggerThread;
 import replicatorg.app.util.SwingPythonSelector;
 import replicatorg.app.util.serial.Name;
 import replicatorg.app.util.serial.Serial;
-import replicatorg.drivers.Driver;
 import replicatorg.drivers.EstimationDriver;
 import replicatorg.drivers.MultiTool;
 import replicatorg.drivers.OnboardParameters;
@@ -152,7 +149,6 @@ import replicatorg.model.JEditTextAreaSource;
 import replicatorg.plugin.toolpath.ToolpathGenerator;
 import replicatorg.plugin.toolpath.ToolpathGenerator.GeneratorEvent;
 import replicatorg.plugin.toolpath.ToolpathGeneratorFactory;
-import replicatorg.plugin.toolpath.ToolpathGenerator.GeneratorListener.Completion;
 import replicatorg.plugin.toolpath.ToolpathGeneratorFactory.ToolpathGeneratorDescriptor;
 import replicatorg.plugin.toolpath.ToolpathGeneratorThread;
 import replicatorg.plugin.toolpath.skeinforge.SkeinforgeGenerator;
@@ -1625,6 +1621,7 @@ ToolpathGenerator.GeneratorListener
 	 */
 	private void moveTypeToHead(Vector<String> v, String type)
 	{
+		@SuppressWarnings("unchecked")
 		Vector<String> temp = (Vector<String>) v.clone();
 		for(String name : temp)
 		{
@@ -1836,6 +1833,7 @@ ToolpathGenerator.GeneratorListener
 		final Image image = Base.getImage("images/about.png", this);
 		int w = image.getWidth(this);
 		int h = image.getHeight(this);
+		@SuppressWarnings("serial")
 		final Window window = new Window(this) {
 			public void paint(Graphics g) {
 				g.drawImage(image, 0, 0, null);
@@ -2409,7 +2407,7 @@ ToolpathGenerator.GeneratorListener
 		String path = selectOutputFile(sourceName);
 		System.out.println("\n#####:" + path);
 
-		String extension = getExtension(path);
+		//String extension = getExtension(path);
 
 		if (path != null) {
 			//Save prferences for sXg format
@@ -3335,6 +3333,7 @@ ToolpathGenerator.GeneratorListener
 	 *  Class for the Popup menu displayed when one right-clicks on a file .
 	 */
 	class TextAreaPopup extends JPopupMenu {
+		private static final long serialVersionUID = 1L;
 		// String currentDir = System.getProperty("user.dir");
 		String referenceFile = null;
 

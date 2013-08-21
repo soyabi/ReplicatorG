@@ -96,19 +96,8 @@ class STLASCIIParser extends STLParser
     public boolean parse( final URL url, final Component parentComponent )
     throws InterruptedIOException, IOException
     {
-        InputStream stream = null;
-        try
-        {
-            stream = url.openStream( );
-        }
-        catch( IOException e )
-        {
-            if( stream != null )
-            {
-                stream.close( );
-            }
-            throw e;
-        }
+        InputStream stream = url.openStream( );
+      
         stream = new ProgressMonitorInputStream
         (
             parentComponent,
@@ -161,19 +150,8 @@ class STLASCIIParser extends STLParser
     public boolean parse( final URL url )
     throws IOException
     {
-        InputStream stream = null;
-        try
-        {
-            stream = url.openStream( );
-        }
-        catch( IOException e )
-        {
-            if( stream != null )
-            {
-                stream.close( );
-            }
-            throw e;
-        }
+        InputStream stream = url.openStream( );
+      
         BufferedReader reader =
             new BufferedReader( new InputStreamReader( stream ) );
         boolean isAscii = false;

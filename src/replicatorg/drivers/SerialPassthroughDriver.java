@@ -24,8 +24,6 @@
 package replicatorg.drivers;
 
 import java.io.IOException;
-import java.text.DecimalFormat;
-import java.text.DecimalFormatSymbols;
 import java.text.NumberFormat;
 import java.util.Date;
 import java.util.EnumSet;

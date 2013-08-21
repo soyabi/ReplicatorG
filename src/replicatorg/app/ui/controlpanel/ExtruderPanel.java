@@ -52,6 +52,7 @@ import replicatorg.machine.MachineInterface;
 import replicatorg.machine.model.ToolModel;
 
 public class ExtruderPanel extends JPanel{
+	private static final long serialVersionUID = 1L;
 	private final MachineInterface machine;
 	private final ToolModel tool0, tool1;
 	

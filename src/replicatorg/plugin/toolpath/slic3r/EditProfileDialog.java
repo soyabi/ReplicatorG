@@ -28,6 +28,7 @@ import replicatorg.app.Base;
 import replicatorg.plugin.toolpath.slic3r.Slic3rGenerator.Profile;
 
 class EditProfileDialog extends JDialog {
+	private static final long serialVersionUID = 1L;
 	final boolean postProcessToolheadIndex = true;
 	final String manageStr = "Manage profiles...";
 	final String profilePref = "replicatorg.slic3r.profilePref";

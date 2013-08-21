@@ -4,6 +4,7 @@ import javax.swing.Box;
 
 public class ExclusionBox extends Box
 {
+	private static final long serialVersionUID = 1L;
 
 	public ExclusionBox(int arg0) {
 		super(arg0);

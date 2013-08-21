@@ -88,18 +88,8 @@ public class STLASCIIParser2 extends STLParser {
 	 * @throws IOException
 	 */
 	private StreamTokenizer getNewTokenizer(URL url) throws IOException {
-		InputStream stream = null;
-		try {
-			stream = url.openStream( );
-		}
-		catch( IOException e )
-		{
-			if( stream != null )
-			{
-				stream.close( );
-			}
-			throw e;
-		}
+		InputStream stream = url.openStream( );
+	
 		StreamTokenizer tokenizer = new StreamTokenizer( new BufferedReader( new InputStreamReader( stream ) ) );
 		tokenizer.resetSyntax( );
 		tokenizer.eolIsSignificant(false);

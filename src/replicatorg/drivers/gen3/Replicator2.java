@@ -5,7 +5,6 @@ import java.util.logging.Level;
 import replicatorg.app.Base;
 import replicatorg.drivers.InteractiveDisplay;
 import replicatorg.drivers.Version;
-import replicatorg.machine.model.ToolModel;
 
 public class Replicator2 extends MightyBoard 
 	implements InteractiveDisplay

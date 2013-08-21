@@ -64,6 +64,7 @@ import com.sun.j3d.utils.universe.SimpleUniverse;
  *
  */
 public class PreviewPanel extends JPanel {
+	private static final long serialVersionUID = 1L;
 
 	BoundingSphere bounds =
 		new BoundingSphere(new Point3d(0.0,0.0,0.0), 1000.0);
@@ -578,6 +579,7 @@ public class PreviewPanel extends JPanel {
 			SimpleUniverse.getPreferredConfiguration();
 
 		// Create a Canvas3D using the preferred configuration
+		@SuppressWarnings("serial")
 		Canvas3D c = new Canvas3D(config) {
 			public Dimension getMinimumSize()
 		    {

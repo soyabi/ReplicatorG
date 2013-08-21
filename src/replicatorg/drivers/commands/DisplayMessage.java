@@ -1,7 +1,5 @@
 package replicatorg.drivers.commands;
 
-import java.util.EnumSet;
-
 import replicatorg.app.Base;
 import replicatorg.drivers.Driver;
 import replicatorg.drivers.InteractiveDisplay;

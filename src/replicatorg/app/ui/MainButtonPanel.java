@@ -58,11 +58,13 @@ import replicatorg.machine.MachineToolStatusEvent;
  * run/stop/etc buttons for the ide
  */
 public class MainButtonPanel extends BGPanel implements MachineListener, ActionListener {
+	private static final long serialVersionUID = 1L;
 
 	/**
 	 * This button is a special button type for the top bar. 
 	 */
 	class MainButton extends JButton implements ChangeListener {
+		private static final long serialVersionUID = 1L;
 		private String rolloverText; 
 		public MainButton(String rolloverText,
 				Image active,

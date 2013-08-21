@@ -29,6 +29,7 @@ import replicatorg.model.Build;
  *
  */
 class ProgressDialog extends JDialog implements ToolpathGenerator.GeneratorListener {
+	private static final long serialVersionUID = 1L;
 	
 	Thread parentThread;
 	JLabel topLabel;

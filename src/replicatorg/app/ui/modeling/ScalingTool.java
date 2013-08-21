@@ -160,6 +160,8 @@ public class ScalingTool extends Tool {
 			scaleFactor.setValue((double) ((int)(100*scaleDragChange))/100);
 //			Base.logger.info("scaleDragChange="+scaleDragChange);
 			break;
+		default:
+			break;
 		}
 		startPoint = p;
 	}

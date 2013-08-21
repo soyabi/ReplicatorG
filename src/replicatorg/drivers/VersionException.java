@@ -8,6 +8,7 @@ package replicatorg.drivers;
  *
  */
 public class VersionException extends RuntimeException {
+	private static final long serialVersionUID = 1L;
 	private Version detected;
 	public VersionException(Version detected) {
 		this.detected = detected;

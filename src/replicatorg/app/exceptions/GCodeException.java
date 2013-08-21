@@ -23,6 +23,7 @@
 
 package replicatorg.app.exceptions;
 
+@SuppressWarnings("serial")
 public class GCodeException extends Exception
 {
 	public GCodeException(String message)

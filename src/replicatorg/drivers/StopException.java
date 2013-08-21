@@ -5,6 +5,8 @@ package replicatorg.drivers;
  * @author matt.mets
  */
 public class StopException extends Exception {
+	private static final long serialVersionUID = 1L;
+	
 	public enum StopType {
 		UNCONDITIONAL_HALT,
 		PROGRAM_END,

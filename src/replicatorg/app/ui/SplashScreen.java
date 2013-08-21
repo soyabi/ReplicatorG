@@ -3,6 +3,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class SplashScreen extends JWindow {
+	private static final long serialVersionUID = 1L;
   BorderLayout borderLayout1 = new BorderLayout();
   JLabel imageLabel = new JLabel();
   JPanel southPanel = new JPanel();

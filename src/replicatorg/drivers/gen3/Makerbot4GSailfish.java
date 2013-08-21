@@ -27,12 +27,9 @@
 package replicatorg.drivers.gen3;
 
 import java.awt.Color;
-import java.io.UnsupportedEncodingException;
 import java.util.Arrays;
 import java.util.EnumSet;
 import java.util.Hashtable;
-import java.util.logging.Level;
-
 import replicatorg.app.Base;
 import replicatorg.drivers.InteractiveDisplay;
 import replicatorg.drivers.OnboardParameters;
@@ -54,7 +51,7 @@ public class Makerbot4GSailfish extends Makerbot4GAlternateDriver
 	// note: other machines also inherit: PenPlotter, MultiTool
 	
 	/// Stores LED color by effect. Mostly uses '0' (color now)
-	private Hashtable ledColorByEffect;
+	private Hashtable<Integer, Color> ledColorByEffect;
 
 	private boolean eepromChecked = false;
 	
@@ -73,7 +70,7 @@ public class Makerbot4GSailfish extends Makerbot4GAlternateDriver
 	public Makerbot4GSailfish() {
 		super();
 		absoluteXYZ = true;
-		ledColorByEffect = new Hashtable();
+		ledColorByEffect = new Hashtable<Integer, Color>();
 		ledColorByEffect.put(0, Color.BLACK);
 		Base.logger.info("Created a Sailfish");
 
@@ -389,7 +386,7 @@ public class Makerbot4GSailfish extends Makerbot4GAlternateDriver
 			//convert feedrate to mm/sec
 			feedrate = feedrate / 60.0;
 			
-			Point5d stepsPerMM = machine.getStepsPerMM();
+			// Point5d stepsPerMM = machine.getStepsPerMM();
 			
 			//
 			// Commented out 4/16/13 Jetty.  Likely redundant and an overhang from RPM days.
@@ -504,13 +501,13 @@ public class Makerbot4GSailfish extends Makerbot4GAlternateDriver
 */
 		PacketBuilder pb = new PacketBuilder(MotherboardCommandCode.SET_LED_STRIP_COLOR.getCode());
 
-		int Channel = 3;
-		int Brightness = 1;
+//		int Channel = 3;
+//		int Brightness = 1;
 		int BlinkRate = 0;
-		byte colorSelect = (byte)0x3F;
+//		byte colorSelect = (byte)0x3F;
        
        // {bits: XXBBGGRR : BLUE: 0b110000, Green:0b1100, RED:0b11}
-       colorSelect = getColorBits(color);
+//       colorSelect = getColorBits(color);
        
 		pb.add8(color.getRed());
 		pb.add8(color.getGreen());
@@ -847,7 +844,6 @@ public class Makerbot4GSailfish extends Makerbot4GAlternateDriver
 		byte options = 0; //bit 1 true cause the buffer to clear, bit 2 true indicates message complete
 		final int MAX_MSG_PER_PACKET = 16;
 		int sentTotal = 0; /// set 'clear buffer' flag
-		double timeout = 0;
 		
 		/// send message in 25 char blocks. Set 'clear buffer' on the first,
 		/// and set the timeout only on the last block
@@ -858,7 +854,6 @@ public class Makerbot4GSailfish extends Makerbot4GAlternateDriver
 			// if this is the last packet, set timeout and indicate that message is complete
             // set the "wait on button" flag if specified
 			if(!(sentTotal + MAX_MSG_PER_PACKET <  message.length())){
-				timeout = seconds;
 				options |= 0x02;
                 if(buttonWait)
                     options |= 0x04;
