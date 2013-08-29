@@ -1,4 +1,10 @@
 0040r22-Radius ReplicatorG
+* Code Cleanup for Eclipse
+* Updates to Eclipse classpath and project files.
+* Removed Dead Code
+* Fixed Serializable Warnings
+
+0040r22-Sailfish ReplicatorG
 * Replicator 2 profile now more robust
 * support for selecting between s3g, x3g file formats (future bots)
 * minor profile updates
