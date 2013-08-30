@@ -293,6 +293,19 @@ public interface OnboardParameters {
 	/** get the Stepper Voltage Reference */
 	int getStoredStepperVoltage(int stepperId);
 	
+	public static enum BuildState {
+		NONE, RUNNING, FINISHED, PAUSED, CANCELLED, SLEEP
+	}
+
+	public class BuildStatistics {
+		public BuildState buildState;
+		public int hoursElapsed;
+		public int minutesElapsed;
+		public int lineNumber;
+	}
+
+	BuildStatistics getBuildStatistics();
+		
 	public class CommunicationStatistics {
 		public int packetCount;
 		public int sentPacketCount;

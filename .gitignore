@@ -21,4 +21,4 @@ ReplicatorG.app
 *.tmp
 *.svn
 
-replicatorg
+/replicatorg

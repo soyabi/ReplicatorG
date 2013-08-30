@@ -38,6 +38,7 @@ public enum MotherboardCommandCode {
 	SET_ACCELERATION_TOGGLE(156, ""),
 	PAUSE_AT_ZPOS(158, ""),
 
+	GET_BUILD_STATS(24,""),
 	GET_COMMUNICATION_STATS(25,""),
 	
 	// QUEUE_POINT_INC(128) obsolete

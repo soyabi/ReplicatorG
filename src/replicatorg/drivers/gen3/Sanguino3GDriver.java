@@ -600,7 +600,23 @@ public class Sanguino3GDriver extends SerialDriver implements
 		return v;
 	}
 
+	public BuildStatistics getBuildStatistics() {
+		BuildStatistics bs = new BuildStatistics();
 
+		PacketBuilder pb = new PacketBuilder(
+				MotherboardCommandCode.GET_BUILD_STATS.getCode());
+
+		PacketResponse pr = runQuery(pb.getPacket(), 1);
+		if (pr.isEmpty())
+			return null;
+		bs.buildState = BuildState.values()[pr.get8()];
+		bs.hoursElapsed = pr.get8();
+		bs.minutesElapsed = pr.get8();
+		bs.lineNumber = pr.get32();
+
+		return bs;
+	}
+	
 	public CommunicationStatistics getCommunicationStatistics() {
 		CommunicationStatistics stats = new CommunicationStatistics();
 
