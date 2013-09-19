@@ -487,13 +487,13 @@ public class Sanguino3GDriver extends SerialDriver implements
 				if ( commandType == CommandType.QUERY )	return PacketResponse.timeoutResponse();
 				else					throw new RetryException();
 			} else if (pr.getResponseCode() == PacketResponse.ResponseCode.CANCEL) {
-				Base.getEditor().handleStop(); ///  horrible horrible 
+				//Base.getEditor().handleStop(); ///  horrible horrible 
 				Base.logger.severe("Build Canceled by Printer");
 			} else if (pr.getResponseCode() == PacketResponse.ResponseCode.BOT_BUILDING) {
-				Base.getEditor().handleStop(); ///  horrible horrible 
+				//Base.getEditor().handleStop(); ///  horrible horrible 
 				Base.logger.severe("Printer was building from SD Card, when RepG sent it a command, build cancelled");
 			} else if (pr.getResponseCode() == PacketResponse.ResponseCode.BOT_OVERHEAT) {
-				Base.getEditor().handleStop(); ///  horrible horrible 
+				//Base.getEditor().handleStop(); ///  horrible horrible 
 				Base.logger.severe("Printer has overheated, build cancelled");
 			} else if ( pr.getResponseCode() == PacketResponse.ResponseCode.UNSUPPORTED && packet[2] == MotherboardCommandCode.IS_FINISHED.getCode()) {
 				if (!isNotifiedFinishedFeature) {
@@ -521,7 +521,7 @@ public class Sanguino3GDriver extends SerialDriver implements
 					     pr.getResponseCode() == PacketResponse.ResponseCode.DOWNSTREAM_TIMEOUT ||
 					     pr.getResponseCode() == PacketResponse.ResponseCode.TOOL_LOCK_TIMEOUT ) {
 						if ( isInitialized() && commandType != CommandType.QUERY ) {
-							Base.getEditor().handleStop(); ///  horrible horrible 
+							//Base.getEditor().handleStop(); ///  horrible horrible 
 							Base.logger.severe("Build Canceled Due To Communications Error");
 						}
 					}

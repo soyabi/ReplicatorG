@@ -29,6 +29,9 @@ public class MachineState extends Object implements Cloneable {
 		PAUSED,
 		/** The machine reported a fatal error, and is halted (but still connected). **/
 		ERROR,
+		CANCELLED,
+		FINISHED
+		
 	};
 	
 	private State state;
